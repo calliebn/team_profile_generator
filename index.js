@@ -1,5 +1,6 @@
 const fs = require ('fs')
 const inquirer = require ('inquirer')
+const pageGenerator = require('./src/template.js')
 
 const questions = [
     {
@@ -41,3 +42,33 @@ const questions = [
 
     }
 ]
+
+const promptUser = () => {
+    return inquirer.prompt(questions)
+    .then(userResponse => {
+
+        allEmployees.push(userResponse);
+
+        if (userResponse.addEmployee) {
+            return promptUser();
+        }else {
+            return allEmployees;
+        };
+    });
+};
+
+const writeProfile = (htmlContent) => {
+    fs.writeFile('./dist/index.html', htmlContent, err => {
+        if (err) {
+            throw err
+        };
+        console.log('Team profile created');
+    });
+};
+
+console.log(`Let's add some team mates!`);
+
+promptUser()
+    .then(data => pageGenerator(data))
+    .then(generatedHTML => writeProfile(generatedHTML))
+    .catch(err => console.log(err));
