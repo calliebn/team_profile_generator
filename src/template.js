@@ -48,7 +48,7 @@ const addEmployee = employeeInfo => {
             <div class="content">
                 <p>${newEmployee.getId()}<br />
                 ${newEmployee.getEmail()}<br />
-                ${extraInfo}</p>
+                ${uniqueInfo}</p>
             </div>
         </div>
     </div>
