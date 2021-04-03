@@ -15,12 +15,16 @@
 ## Description
 A node module used to create a team profile html page. The page will contain one manager and can contain mutliple engineers and interns.
 
+![Screenshot of html page](/assets/team_page.png)
+
+![Screenshot of terminal](/assets/questions.png)
+
 ## Installation
 To install the required dependencies, run the following command:
 init
 
 ## Usage
-The user is guided through a series of questions about their team members. Theuser's responses will populate fields in a HTML doc
+The user is guided through a series of questions about their team members. The user's responses will populate fields in a HTML doc
 
 ## License
 The project is licensed under the MIT license.
@@ -31,6 +35,7 @@ npm run test
 
 ## Links
 The link to the repo is https://github.com/calliebn/team_profile_generator
+The link to the video is https://drive.google.com/file/d/11PETb21q0A1KH2QUF9RB_CQsgroOMwJG/view
 
 ## Contributors
 calliebn
